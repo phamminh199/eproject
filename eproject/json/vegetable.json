@@ -1,0 +1,9 @@
+
+    [
+    {"Img": "Vegetable Juices/can-tay.jpg","Name": "Can Tay", "Avalable": "Always", "Price": 20000},
+    {"Img": "Vegetable Juices/dua-chuot.jpg","Name": "Dua Chuot", "Avalable": "Always", "Price": 20000},
+    {"Img": "Vegetable Juices/ca-rot.jpg","Name": "Ca Rot", "Avalable": "Always", "Price": 20000},
+    {"Img": "Vegetable Juices/cu-den.jpg","Name": "Beet", "Avalable": "Always", "Price": 20000},
+    {"Img": "Vegetable Juices/rau-chan-vit.jpg","Name": "Spinach", "Avalable": "Always", "Price": 20000},
+    {"Img": "Vegetable Juices/rau-ma.jpg","Name": "Rau ma", "Avalable": "Always", "Price": 20000}
+]
