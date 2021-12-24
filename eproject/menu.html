@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="menu.css">
+	<title>Menu</title>
+</head>
+
+<body ng-app="myApp">
+<div class="container" ng-controller="mainCTR">
+	<div id="p1" >
+			<ul class="root">
+				<li><a href=""><span>Home</span> </a></li>
+				<li><a href="#/!"> <span>Menu</span> </a>
+					<ul class="submenu">
+						<li><a href="#!fruit">Fruit juices</a></li>
+						<li><a href="#!vegetable"> Vegetable Juices</a></li>
+						<li><a href="#!smoothies">Smoothies</a></li>
+						<li><a href="#!protein-shakes"> Protein Shakes</a></li>
+						<li><a href="#!winter-menu">Winter Menu</a></li>
+						<li><a href="#!chocolate">Chocolate Juices</a></li>
+						<li><a href="#!mock-tails">Mock Tails</a></li>
+					</ul>
+
+				</li>
+				<li><a href=""> <span>Guide</span> </a></li>
+				<li><a href=""> <span>Catering</span> </a></li>
+				<li><a href=""> <span>Franchising</span></a></li>
+				<li><a href=""> <span>Contract us</span></a></li>
+				<li><a href=""><span> About us</span></a></li>
+
+			</ul>
+		
+        <div id="img">
+            <img src="Red Grey Automotive Car Silhouette Logo (5) (1).png">
+        </div>
+		</div>
+		<div ng-view></div>
+		
+		
+		
+		<script>
+            var app = angular.module("myApp", ["ngRoute"]);
+            app.config(function ($routeProvider) {
+                $routeProvider
+                    .when("/fruit", {
+                        templateUrl: "fruit.html"
+                    })
+                    .when("/vegetable", {
+                        templateUrl: "vegetable.html",
+                        
+                    })
+					.when("/smoothies", {
+                        templateUrl: "smoothies.html",
+                        
+                    })
+					.when("/chocolate", {
+                        templateUrl: "chocolate.html",
+                        
+                    })
+					.when("/protein-shakes", {
+                        templateUrl: "protein-shakes.html",
+                        
+                    })
+					.when("/mock-tails", {
+                        templateUrl: "mock-tails.html",
+                        
+                    })
+					.when("/winter-menu", {
+                        templateUrl: "winter-menu.html",
+                        
+                    })
+            });
+			app.controller('mainCTR', function ($scope, $http) {
+                $http.get("json/fruit.json").then(function (response) {
+                    $scope.fruit = response.data;
+										
+                    console.log($scope.fruit)
+                });
+			
+                $http.get("json/vegetable.json").then(function (response) {
+                    $scope.vegetable = response.data;					
+                    console.log($scope.vegetable)
+                });
+				$http.get("json/chocolate.json").then(function (response) {
+                    $scope.chocolate = response.data;					
+                    console.log($scope.chocolate)
+                });
+				$http.get("json/smoothies.json").then(function (response) {
+                    $scope.smoothies = response.data;					
+                    console.log($scope.smoothies)
+                });
+				$http.get("json/protein-shakes.json").then(function (response) {
+                    $scope.protein = response.data;					
+                    console.log($scope.protein)
+                });
+				$http.get("json/winter-menu.json").then(function (response) {
+                    $scope.winter = response.data;					
+                    console.log($scope.winter)
+                });
+				$http.get("json/mock-tails.json").then(function (response) {
+                    $scope.mocktail = response.data;					
+                    console.log($scope.mocktail)
+                });
+		});
+		</script>
+	<footer style="text-align: center;font-weight: bolder;">
+            &copy;Copyright Fpt Aptech
+		</footer>
+	</div>
+	
+</body>
+</html>

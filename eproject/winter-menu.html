@@ -1,0 +1,20 @@
+<div>
+    <div class="headline">
+        <h3>Winter Menu</h3><br>
+        <input type="text" ng-model="info" placeholder="Search....">
+    </div>
+    <div class="product" ng-repeat="w in winter|filter:info">
+            
+               <img src="{{w.Img}}" class="product-thumb"> 
+               <a href="" class="buy">Add to cart</a><br>                
+        
+            {{w.Name}}<br>
+            {{w.Avalable}}<br>
+            {{w.Price}}<br>
+            
+    </div>
+    
+    
+</div>    
+
+</body>
