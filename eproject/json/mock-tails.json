@@ -1,0 +1,16 @@
+[
+    {"Img": "Mock Tails/apple-cider.jpg","Name": "Lapple-cider", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/berry-burlesque.jpg","Name": "berry-burlesque", "Avalable": "Seasonal", "Price": 20000},
+    {"Img": "Mock Tails/cucumer-gimlet.jpg","Name": "cucumer-gimlet", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/grove-citrus-fizz.jpg","Name": "grove-citrus-fizz", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/lavendar-lemonade.jpg","Name": "lavendar-lemonade", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/lyre-s-irish-coffee.png","Name": "lyre-s-irish-coffee", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/magic-apple.jpg","Name": "magic-apple", "Avalable": "Seasonal", "Price": 20000},
+    {"Img": "Mock Tails/mango_mule.jpg","Name": "mango_mule", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/rose-fizz.jpg","Name": "rose-fizz", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/shirley-ginger.jpg","Name": "shirley-ginger", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/vantage-point.jpg","Name": "vantage-point", "Avalable": "Always", "Price": 20000},
+    {"Img": "Mock Tails/virgin-watermelon-margarita.jpg","Name": "virgin-watermelon-margarita", "Avalable": "Seasonal", "Price": 20000}
+    
+]
+
