@@ -1,2 +1,2 @@
 # eproject
-https://phamminh199.github.io/eproject/eproject/
+https://phamminh199.github.io/eproject
