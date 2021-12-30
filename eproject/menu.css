@@ -86,12 +86,6 @@ ul.submenu li a:hover {
     text-decoration: none;
 }
 
-
-
-.word {
-    font-size: 1.3rem;
-}
-
 #img {
 
     position: absolute;
@@ -118,21 +112,32 @@ display: inline-block;
 }
 
 
-div.product {
+div.product{
     background-color: sandybrown;
     width: 300px;
-    padding: 50px;
     margin: 20px;
-    display: flex;
-    flex-wrap: wrap;
     float: left;
+    flex-wrap: wrap;
     text-align: center;
 }
 div.product img{
+    margin-left: 50px;
+    margin-top: 30px;
     display: block;
     height: 200px;
     width: 200px;
 }
-div.product.p{
+
+
+div.product a.buy{
     padding-top: 2px;
+    text-align: center;
 }
+#p7 {
+    border: tomato solid thick;
+    padding: 1rem;
+    background-color: #ff914d;
+    clear: left;
+    bottom: 0px;
+}
+

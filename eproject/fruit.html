@@ -1,20 +1,21 @@
-    <div>
-        <div class="headline">
-            <h3>Fruit Juice Menu</h3><br>
-            <input type="text" ng-model="info" placeholder="Search....">
-        </div>
-        <div class="product" ng-repeat="a in fruit|filter:info">
-                
-                   <img src="{{a.Img}}" class="product-thumb"> 
-                   <a href="" class="buy">Add to cart</a><br>                
+
+<div>
+    <div class="headline">
+        <h3>Fruit Juice Menu</h3><br>
+        <input type="text" ng-model="info" placeholder="Search....">
+    </div>
+    <div class="product" ng-repeat="a in fruit|filter:info">
             
-                {{a.Name}}<br>
-                {{a.Avalable}}<br>
-                {{a.Price}}<br>
-                
-        </div>
+               <img src="{{a.Img}}" class="product-thumb"> 
+               <a href="" class="buy" ng-click="addCart">Add to cart</a><br>                
         
-		
-    </div>    
+            {{a.Name}}<br>
+            {{a.Avalable}}<br>
+            {{a.Price}}<br>
+            
+    </div>
+    
+    
+</div>    
 
 </body>
