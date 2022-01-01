@@ -132,13 +132,14 @@ div.product img{
 div.product a.buy{
     padding-top: 2px;
     text-align: center;
+    background-color: yellowgreen;
+    color: white;
 }
 #p7 {
     border: tomato solid thick;
-    padding: 1rem;
+    margin-top: 300px;
     background-color: #ff914d;
     clear: left;
-    bottom: 0px;
-    margin-top: 300px;
+    
 }
 

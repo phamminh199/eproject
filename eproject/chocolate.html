@@ -3,14 +3,14 @@
         <h3>Chocolate Menu</h3><br>
         <input type="text" ng-model="info" placeholder="Search....">
     </div>
-    <div class="product" ng-repeat="choco in chocolate|filter:info">
+    <div class="product" ng-repeat="a in menu.chocolate|filter:info">
             
-               <img src="{{choco.Img}}" class="product-thumb"> 
-               <a href="" class="buy">Add to cart</a><br>                
+               <img src="{{a.Img}}" class="product-thumb"> 
+               <a href="" class="buy" ng-click="addCart($index)">Add to cart</a><br>                
         
-            {{choco.Name}}<br>
-            {{choco.Avalable}}<br>
-            {{choco.Price}}<br>
+            {{a.Name}}<br>
+            {{a.Avalable}}<br>
+            {{a.Price}}<br>
             
     </div>
     

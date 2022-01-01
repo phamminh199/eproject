@@ -3,17 +3,16 @@
         <h3>Vegetable Juice Menu</h3><br>
         <input type="text" ng-model="info" placeholder="Search....">
     </div>
-    <div class="product" ng-repeat="b in vegetable|filter:info">
+    <div class="product" ng-repeat="a in menu.vegetable|filter:info">
             
-               <img src="{{b.Img}}" class="product-thumb"> 
-               <a href="" class="buy">Add to cart</a>                
+               <img src="{{a.Img}}" class="product-thumb"> 
+               <a href="" class="buy" ng-click="addCart($index)">Add to cart</a>  <br>              
         
-            <p class="product-name">{{b.Name}}</p>
-            <p class="product-status">{{b.Avalable}}</p>
-            <p class="product-price">{{b.Price}}</p>
+               {{a.Name}}<br>
+               {{a.Avalable}}<br>
+               {{a.Price}}<br>
             
     </div>
-    
     
 </div>    
 

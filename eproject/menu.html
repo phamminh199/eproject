@@ -7,13 +7,14 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    
 <link rel="stylesheet" href="menu.css">
 <script src="script.js"></script>
 	<title>Menu</title>
 </head>
 
 <body ng-app="myApp">
-<div class="container" ng-controller="mainCTR">
+<div class="container" ng-controller='productcontroll' ng-init="menu">
 	<div id="p1" >
 			<ul class="root">
 				<li><a href=""><span>Home</span> </a></li>
@@ -42,6 +43,7 @@
         </div>
 		</div>
 		<div ng-view></div><br><br>
+        
 		
 
 	
@@ -51,12 +53,7 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <img src="Red Grey Automotive Car Silhouette Logo (5) (1).png">
-                        <p class="word">Shrek-Juice.com is a website of the Shrek Juice Centre which is big Juice
-                            Centre famous for variety
-                            of juices it provides. They also provide catering service for various events like Wedding, Shows
-                            and
-                            so
-                            on.</p>
+                        <p class="word">Shrek-Juice.com is a website of the Shrek Juice Centre which is big Juice      Centre famous for variety of juices it provides. They also provide catering service for various events like Wedding, Shows and so on.</p>
         
                     </div>
                     <div class="col-sm-2">

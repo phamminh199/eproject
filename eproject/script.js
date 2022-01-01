@@ -2,7 +2,8 @@ var app = angular.module("myApp", ["ngRoute"]);
             app.config(function ($routeProvider) {
                 $routeProvider
                     .when("/fruit", {
-                        templateUrl: "fruit.html"
+                        templateUrl: "fruit.html",
+                        
                     })
                     .when("/vegetable", {
                         templateUrl: "vegetable.html",
@@ -30,47 +31,26 @@ var app = angular.module("myApp", ["ngRoute"]);
                     })
                     .when("/cart", {
                         templateUrl: "cart.html",
-                        controller: "cartControl"
+                        
                     })
             });
-			app.controller('mainCTR', function ($rootScope, $http) {
-                $http.get("json/fruit.json").then(function (response) {
-                    $rootScope.fruit = response.data;
-										
-                    console.log($rootScope.fruit)
-                });
-			
-                $http.get("json/vegetable.json").then(function (response) {
-                    $rootScope.vegetable = response.data;					
-                    console.log($rootScope.vegetable)
-                });
-				$http.get("json/chocolate.json").then(function (response) {
-                    $rootScope.chocolate = response.data;					
-                    console.log($rootScope.chocolate)
-                });
-				$http.get("json/smoothies.json").then(function (response) {
-                    $rootScope.smoothies = response.data;					
-                    console.log($rootScope.smoothies)
-                });
-				$http.get("json/protein-shakes.json").then(function (response) {
-                    $rootScope.protein = response.data;					
-                    console.log($rootScope.protein)
-                });
-				$http.get("json/winter-menu.json").then(function (response) {
-                    $rootScope.winter = response.data;					
-                    console.log($rootScope.winter)
-                });
-				$http.get("json/mock-tails.json").then(function (response) {
-                    $rootScope.mocktail = response.data;					
-                    console.log($rootScope.mocktail)
+            app.run( function ($rootScope, $http){
+                $http.get("shrek.json").then(function (response){
+                    $rootScope.menu = response.data;
+                    console.log($rootScope.menu);
+                   
                 });
                 $rootScope.cart = [];
                 $rootScope.total = 0;
-		});
-        app.controller("mainCRT", function ($scope, $rootScope) {
+                
+            });
+			
+                		                		
+        app.controller("productcontroll", function ($scope, $rootScope) {
+            
             $scope.addCart = function (id) {
-                var item = $rootScope.fruit[id];
-        
+                var item =  $rootScope.menu.fruit[id];
+                
                 for (var i = 0; i < $rootScope.cart.length; ++i) {
                     if ($rootScope.cart[i].id == id) {
                         $rootScope.cart[i].qty++;
@@ -78,18 +58,19 @@ var app = angular.module("myApp", ["ngRoute"]);
                         return;
                     }
                 }
-        
-        
                 var newEle = {
                     "id": id,
                     "Name": item.Name,
                     "Price": item.Price,
                     "qty": 1
                 }
-                $rootScope.total += item.Price
+                $rootScope.total += item.price
                 $rootScope.cart.push(newEle);
                 console.log($rootScope.cart)
+                
+                
             }
+            
         });
         app.controller("cartControl", function ($scope, $rootScope) {
 
